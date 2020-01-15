@@ -1,0 +1,54 @@
+body {
+    background: rgb(0, 0, 77);
+    display: flex;
+    margin-top: 30vh;
+    margin-bottom: 30vh;
+    font-size: 2vw;
+    align-content: center;
+    justify-content: center;
+}
+
+.container {
+    justify-content: center;
+}
+
+.btn-container {
+    background: rgb(0, 0, 77);
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+}
+
+.text-center {
+    color: rgb(148, 206, 240);
+    font-family: Arial, Helvetica, sans-serif;
+    font: 'Arial';
+    font-weight: bold;
+    font-style: normal;
+    margin: em;
+}
+
+.btn-outline-info {
+    margin: 5px;
+}
+
+h1 {
+    color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+    font: 'Arial';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 5em;
+    margin: 0px;
+}
+
+#name {
+    color: rgb(148, 206, 240)
+}
+
+#fillerText {
+    font-size: 2em;
+    width: inherit;
+    height: inherit;
+}
