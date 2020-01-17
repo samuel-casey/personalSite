@@ -21,29 +21,38 @@
 
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">
-            <img src="Headshot.png" width="55" height="55" alt="Sam's face">
-        </a>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item inactive">
-                    <a class="nav-link" href="aboutme.html">About Me<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="softwareprojects.html">Software Projects<span
-                                class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item inactive">
-                    <a class="nav-link" href="writing.html">Writing<span class="sr-only">(current)</span></a>
-                </li>
-
-            </ul>
+    <!-- NAVBAR -->
+    <div class="pos-f-t">
+        <!-- expanding content -->
+        <div class="collapse navbar-collapse navbar-light " id="navbarToggleExternalContent ">
+            <div class="p-4 " style="background-color: #51785C;  ">
+                <h4 style="color: rgba(225, 238, 189, 0.83); ">Software Projects</h4>
+                <ul class="navbar-nav " style="justify-content: flex-start;">
+                    <li class="nav-item ">
+                        <a class="nav-link inactive " style="color: #B58341;" href="index.html" onmouseover="this.style.color='#FBFF4E';" onmouseout="this.style.color='#B58341';">Home<span class="sr-only ">(current)</span></a>
+                    </li>
+                    <li class="nav-item inactive ">
+                        <a class="nav-link inactive" style="color: #B58341;" href="aboutme.html" onmouseover="this.style.color='#FBFF4E';" onmouseout="this.style.color='#B58341';">About Me</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link inactive" style="color: #B58341;" href="writing.html" onmouseover="this.style.color='#FBFF4E';" onmouseout="this.style.color='#B58341';">Writing</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </nav>
 
-    <h1 id="fillerText">
+        <!-- hamburger button -->
+        <nav class="navbar" style="background-color: #51785C; color:rgba(170, 85, 6, 0.65);">
+            <button class="navbar-toggler" style="background-color: rgba(225, 238, 189, 0.83);" type="button" data-toggle="collapse" " data-target="#navbarToggleExternalContent " aria-controls="navbarToggleExternalContent " aria-expanded="false "
+            aria-label="Toggle navigation " >
+        <div class="navbar-toggler-icon " style="background-image: url(customToggler.png); height: 40px; width: 60px; justify-self: flex-end; "></div>
+      </button>
+    </nav> 
+
+</div>
+<!-- END NAVBAR -->
+
+    <h1 id="fillerText ">
         Projects go here
     </h1>
 

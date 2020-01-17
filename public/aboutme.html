@@ -11,7 +11,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>About Sam</title>
-    <link href="stylesheet_index.css" rel="stylesheet" type="text/css">
 </head>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -20,24 +19,52 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
-<body>
-    <div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-            <div class="p-4" style="background-color: #51785C; color:rgba(170, 85, 6, 0.65);">
-                <h4 style="color: rgba(225, 238, 189, 0.83);">About me</h4>
-                <span>Toggleable via the navbar brand.</span>
+<body class="container-fluid" style="height: 100vh;">
+
+    <!-- NAVBAR -->
+    <div class="pos-f-t ">
+        <!-- expanding content -->
+        <div class="collapse navbar-collapse navbar-light " id="navbarToggleExternalContent ">
+            <div class="p-4 " style="background-color: #51785C; ">
+                <h4 style="color: rgba(225, 238, 189, 0.83); ">About me</h4>
+                <ul class="navbar-nav " style="justify-content: flex-start; ">
+                    <li class="nav-item ">
+                        <a class="nav-link inactive " style="color: #B58341; " href="index.html " onmouseover="this.style.color='#FBFF4E' ; " onmouseout="this.style.color='#B58341' ; ">Home<span class="sr-only ">(current)</span></a>
+                    </li>
+                    <li class="nav-item inactive ">
+                        <a class="nav-link inactive " style="color: #B58341; " href="softwareprojects.html " onmouseover="this.style.color='#FBFF4E' ; " onmouseout="this.style.color='#B58341' ; ">Software Projects</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link inactive " style="color: #B58341; " href="writing.html " onmouseover="this.style.color='#FBFF4E' ; " onmouseout="this.style.color='#B58341' ; ">Writing</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <nav class="navbar" style="background-color: #51785C; color:rgba(170, 85, 6, 0.65); ">
-            <button class="navbar-toggler" style="border-color: rgba(170, 85, 6, 0.65); background-color: rgba(225, 238, 189, 0.83); height: 40px; width: 6
-            0px;" type=" button " data-toggle="collapse " data-target="#navbarToggleExternalContent " aria-controls="navbarToggleExternalContent " aria-expanded="false " aria-label="Toggle navigation ">
-            <span class="navbar-toggler-icon " style="background-image: url(customToggler.png); height: 40px; width: 60px;"></span>
-          </button>
-        </nav>
+
+        <!-- hamburger button -->
+        <nav class="navbar " style="background-color: #51785C; color:rgba(170, 85, 6, 0.65); ">
+            <button class="navbar-toggler " style="background-color: rgba(225, 238, 189, 0.83); " type="button " data-toggle="collapse " " data-target="#navbarToggleExternalContent " aria-controls="navbarToggleExternalContent " aria-expanded="false "
+    aria-label="Toggle navigation ">
+    <div class="navbar-toggler-icon " style="background-image: url(customToggler.png); height: 40px; width: 60px; justify-self: flex-end; "></div>
+    </button>
+    </nav>
+
     </div>
-    <div>
-        <h1 id="fillerText ">Fun facts go here</h1>
-    </div>
+    <!-- END NAVBAR -->
+
+<!-- PHOTO CONTAINER -->
+
+<!-- END PHOTO CONTAINER -->
+
+<!-- TEXT CONTAINER -->
+<div class="container " style="height: 83.5%; background-color: blue; ">button</div>
+<!-- END TEXT CONTAINER -->
+
+<!-- FOOTER -->
+    <div class="container " style="height:10%; background-color: red; align-self: center; ">button</div>
+<!-- END FOOTER -->
+
 </body>
+
 
 </html>
