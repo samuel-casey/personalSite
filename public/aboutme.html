@@ -10,25 +10,101 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="aboutMeStyle.css" type="text/css">
+    <script src="./aboutMeScript.js" defer></script>
     <title>About Sam</title>
 </head>
 
 <body>
-    <main class="container">
-        <div class="container row-all col-all" id="navbar">
-            <img class="row-2 col-1 center" src="customToggler.png" alt="TOGGLER" id="toggler">
+    <main class="container" id="mainContainer">
+
+        <!-- navbar external content
+        <div class="container row-all col-all navExternalConent">
+            <h4>Collapsed content</h4>
+            <span>Toggleable via the navbar brand.</span>
+        </div> -->
+
+        <!-- NAVBAR LIST -->
+
+        <div class="col-all">
+            <ul class="row-1 col-all navbarExternalContent">
+                <li id="dropdownHeader">About Me</li>
+                <a class="dropdownItem" href="index.html">
+                    <li class="dropdownItem">Home</li>
+                </a>
+                <a href="softwareprojects.html">
+                    <li class="dropdownItem">Software Projects</li>
+                </a>
+                <a href="writing.html">
+                    <li class="dropdownItem">Writing</li>
+                </a>
+            </ul>
+
+            <!-- navbar -->
+
+            <div class="row-1 container col-all" id="navbar">
+                <button class="container col-1 center" id="toggleButtonCollapsed">
+                    <img src="customToggler.png" alt="TOGGLER" id="toggler">
+                </button>
+            </div>
         </div>
-        <div class="container row-2 col-2 center">
+
+
+
+
+
+
+
+
+
+        <!-- photos -->
+
+        <!-- left photo, overlay, text -->
+        <div class="container row-3 col-2 center">
             <img src="samWicklow-200x300.png" alt="IMAGE" id="photos">
         </div>
-        <div class="container row-2 col-3 center">
+        <div class="container row-3 col-2 center">
+            <div class="imgOverlay">
+                <p id="commentary">In my free time I enjoy writing short stories, hiking, and reading old books</p>
+            </div>
+        </div>
+
+        <!-- middle photo, overlay, text -->
+        <div class="container row-3 col-3 center">
             <img src="samHeadshot-200x300.jpg" alt="IMAGE" id="photos">
         </div>
-        <div class="container row-2 col-4 center">
+        <div class="container row-3 col-3 center">
+            <div class="imgOverlay">
+                <p id="commentary">I'm an American entrepreneur and software developer born and raised in Boston, MA</p>
+            </div>
+        </div>
+
+
+        <!-- right photo, overlay, text -->
+        <div class="container row-3 col-4 center">
             <img src="samLinkedin-200x300.png" alt="IMAGE" id="photos">
         </div>
-        <div class="row-3 col-all" id="footer "></div>
+        <div class="container row-3 col-4 center">
+            <div class="imgOverlay">
+                <p id="commentary">In the past, I’ve worked at large companies in finance, product management, and strategy
+                </p>
+            </div>
+        </div>
+
+        <!-- footer -->
+
+        <div class="row-4 col-all" id="footer"></div>
+        <div class="container row-4 col-3 center">
+            <a href="https://twitter.com/_samcasey" id="button"><img src="twitterButton.png " alt="Button " id="photos "></a>
+        </div>
+        <div class="container row-4 col-4 center">
+            <a href="https://www.linkedin.com/in/sam-casey-a7a7a690/" id="button"><img src=linkedInButton.png " alt="Button " id="photos "></a>
+        </div>
+        <div class="container row-4 col-2 center">
+            <a href="https://www.instagram.com/scas3y/" id="button"><img src=instagramButton.png " alt="Button " id="photos "></a>
+        </div>
     </main>
+
 </body>
+
 
 </html>
