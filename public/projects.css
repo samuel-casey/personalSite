@@ -1,4 +1,79 @@
-#displayBackground {
-    background-color: rgba(82, 120, 92, 1);
-    color: red;
-}
+        .gridContainer {
+            height: 90vh;
+        }
+        
+        .displayContainer {
+            height: 78%;
+            width: 80vw;
+        }
+        
+        .displayBackground {
+            background-color: rgba(82, 120, 92, 1);
+            color: white;
+            height: 100%;
+            border-top: 20px solid white;
+        }
+        
+        .gridTest {
+            border: 1px solid greenyellow;
+        }
+        
+        .btnRow {
+            height: 5vh;
+            align-content: center;
+            border-top: 15px solid white;
+        }
+        
+        .projectWindow {
+            border: 20px;
+            background-color: rgba(246, 237, 229, 1);
+            height: 85%;
+            align-self: center;
+        }
+        
+        .contentRow {
+            height: 100%;
+        }
+        
+        .toggleRow {
+            height: 8vh;
+            background-color: rgba(82, 120, 92, 1);
+            padding-bottom: 20px;
+        }
+        
+        .moveBtn {
+            border-left: 5px solid rgba(82, 120, 92, 1);
+            border-right: 5px solid rgba(82, 120, 92, 1);
+            height: 50px;
+            width: 50px;
+            padding-bottom: 15px;
+        }
+        
+        .projectImg {
+            margin-top: 10%;
+            margin-bottom: 15%
+        }
+        
+        .iPhone {
+            color: black;
+            background-color: blue;
+        }
+        
+        .laptop {
+            color: black;
+            background-color: red;
+        }
+        
+        .about {
+            color: black;
+            text-align: left;
+        }
+        
+        .projectName {
+            align-content: center;
+            justify-content: center;
+            color: rgba(181, 131, 65, 1);
+            font-size: 2em;
+            font-weight: bold;
+            font-family: Source Sans Pro;
+        }

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://127.0.0.1:5500/public/softwareprojects.html -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Required meta tags -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./Sam&#39;s Software Projects_files/projects.css" type="text/css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./Sam&#39;s Software Projects_files/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Sam's Software Projects</title>
+
+
+
+
+    <script src="./Sam&#39;s Software Projects_files/jquery-3.2.1.slim.min.js.download" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="./Sam&#39;s Software Projects_files/popper.min.js.download" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="./Sam&#39;s Software Projects_files/bootstrap.min.js.download" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+
+
+
+<body>
+    <!-- NAVBAR -->
+    <div class="pos-f-t">
+        <!-- expanding content -->
+        <div class="collapse navbar-collapse navbar-light " id="navbarToggleExternalContent ">
+            <div class="p-4 " style="background-color: #51785C;  ">
+                <h4 style="color: rgba(225, 238, 189, 0.83); ">Software Projects</h4>
+                <ul class="navbar-nav " style="justify-content: flex-start;">
+                    <li class="nav-item ">
+                        <a class="nav-link inactive " style="color: #B58341;" href="http://127.0.0.1:5500/public/index.html" onmouseover="this.style.color=&#39;#FBFF4E&#39;;" onmouseout="this.style.color=&#39;#B58341&#39;;">Home<span class="sr-only ">(current)</span></a>
+                    </li>
+                    <li class="nav-item inactive ">
+                        <a class="nav-link inactive" style="color: #B58341;" href="http://127.0.0.1:5500/public/aboutme.html" onmouseover="this.style.color=&#39;#FBFF4E&#39;;" onmouseout="this.style.color=&#39;#B58341&#39;;">About Me</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link inactive" style="color: #B58341;" href="http://127.0.0.1:5500/public/writing.html" onmouseover="this.style.color=&#39;#FBFF4E&#39;;" onmouseout="this.style.color=&#39;#B58341&#39;;">Writing</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- hamburger button -->
+        <nav class="navbar" style="background-color: #51785C; color:rgba(170, 85, 6, 0.65);">
+            <button class="navbar-toggler" style="background-color: rgba(225, 238, 189, 0.83);" type="button" data-toggle="collapse" "=" " data-target="#navbarToggleExternalContent " aria-controls="navbarToggleExternalContent " aria-expanded="false " aria-label="Toggle
+                navigation ">
+        <div class="navbar-toggler-icon " style="background-image: url(customToggler.png); height: 40px; width: 60px; justify-self: flex-end; "></div>
+      </button>
+    </nav> 
+
+</div>
+<!-- END NAVBAR -->
+<div class="container-fluid gridContainer ">
+    <div class="row displayContainer container-fluid ">
+        <div class="col-1 ">row1 col1</div>
+        <div class="col-2 displayBackground ">row1 col2</div>
+        <div class="col-1 ">row 1 col3</div>
+    </div>
+    <div class="row ">
+        <div class="col ">row2 col1</div>
+        <div class="col ">row2 col2</div>
+        <div class="col ">row 2 col3</div>
+    </div>
+    
+    <div class="row ">
+        <div class="col ">row3 col1</div>
+        <div class="col ">row3 col2</div>
+        <div class="col ">row 3 col3</div>
+    </div>  
+</div>
+<!-- Code injected by live-server -->
+<script type="text/javascript ">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link "));
+				var head = document.getElementsByTagName("head ")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string " || rel.length == 0 || rel.toLowerCase() == "stylesheet ") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body>
+</html>

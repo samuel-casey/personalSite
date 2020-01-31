@@ -1,0 +1,14 @@
+        .gridContainer {
+            height: 90vh;
+        }
+        
+        .displayContainer {
+            height: 80%;
+            width: 80vw;
+        }
+        
+        .displayBackground {
+            background-color: rgba(82, 120, 92, 1);
+            color: white;
+            height: 100%;
+        }
