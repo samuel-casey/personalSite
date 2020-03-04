@@ -11,9 +11,13 @@
     <!-- custom css link -->
     <link rel="stylesheet" href="projects.css" type="text/css">
 
+    <!-- link to js file used for scrolling projects  -->
+    <script src="./projects.js" defer></script>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Sam's Software Projects</title>
+
 
 
 
@@ -64,57 +68,57 @@
             <div class="row contentRow ">
                 <div class="col "></div>
                 <div class="col-9 projectWindow text-center container ">
-                   <div class="row h-25 projectName " >
-                        PROJECT NAME
-                   </div>
-                    <div class="row h-75 " >
-                        <div class="col-3 iPhone ">iPhone</div>
-                        <div class="col-4 laptop ">Laptop</div>
-                        <div class="col-5 about ">This is a sample about section for a project</div>
-                    </div>
-                </div>
-                <div class="col "></div>
-            </div>
-        </div>
-        <div class="col "></div>
+                   <div class="row h-25 projectName "  id="projectName "> SAMPLE PROJECT </div>
+                   <div class="row h-75 ">
+        <div class="col-4 d-flex-row laptop "><img src="sampleProjectDesktopImg.png " alt="Sample desktop image " id="projectDesktopImg "></div>
+    <div class="col-8 about ">
+        <p id="projectDescription ">This is a sample about section for a project</p>
+        <p id="projectStatus ">Status: complete </p>
+    </div>
+    </div>
+    </div>
+    <div class="col "></div>
+    </div>
+    </div>
+    <div class="col "></div>
     </div>
 
     <!-- toggler row -->
-    
+
     <div class="row container-fluid text-center ">
         <div class="col "></div>
         <div class="col-9 toggleRow ">
-            <img class="moveBtn " src="moveLt.png " alt="moveLt ">
-            <img class="moveBtn " src="moveRt.png " alt="moveRt ">
+            <img class="moveBtn " id="moveLt " src="moveLt.png " alt="moveLt ">
+            <img class="moveBtn " id="moveRt " src="moveRt.png " alt="moveRt ">
         </div>
         <div class="col "></div>
-        
+
 
     </div>
-        
+
     <!-- button row -->
 
     <div class="row btnRow container-fluid " class="btnImg ">
         <div class="col text-center ">
             <a href="https://github.com/samuel-casey " alt="GITHUB LINK ">
-                <img src="codeBtn.png " alt="CODE " >
+                <img src="codeBtn.png " alt="CODE ">
             </a>
         </div>
         <div class="col text-center ">
             <a href="# " alt="PROJECT PREVIEW ">
-                <img src="previewBtn.png " alt="PREVIEW " >
+                <img src="previewBtn.png " alt="PREVIEW ">
             </a>
         </div>
         <div class="col text-center ">
-            <a href="# " alt="PROJECT SITE ">    
-            <img src="linkBtn.png " alt="LINK " >
+            <a href="# " alt="PROJECT SITE ">
+                <img src="linkBtn.png " alt="LINK ">
             </a>
         </div>
-        </div>
+    </div>
 
     <div class="row btnRow container-fluid ">
         <div class="col text-center ">
-                <img src="githubBtn.png " alt="GITHUB ">
+            <img src="githubBtn.png " alt="GITHUB ">
         </div>
         <div class="col text-center ">
             <img src="laptop.png " alt="LAUNCH PREVIEW ">
@@ -122,9 +126,11 @@
         <div class="col text-center ">
             <img src="internet.png " alt="SITE LINK ">
         </div>
-        </div>
+    </div>
     </div>
     </div>
 </body>
+
+
 
 </html>

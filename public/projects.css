@@ -9,7 +9,7 @@
         
         .displayBackground {
             background-color: rgba(82, 120, 92, 1);
-            color: white;
+            /* color: white; */
             height: 100%;
             border-top: 20px solid white;
         }
@@ -60,13 +60,12 @@
         }
         
         .laptop {
-            color: black;
-            background-color: red;
+            align-self: center;
         }
         
         .about {
-            color: black;
             text-align: left;
+            font-size: 1.5em;
         }
         
         .projectName {
@@ -76,4 +75,12 @@
             font-size: 2em;
             font-weight: bold;
             font-family: Source Sans Pro;
+        }
+        
+        #projectDescription {
+            color: red !important;
+        }
+        
+        #projectStatus {
+            color: green !important;
         }
