@@ -45,6 +45,7 @@ h1 {
     .buttons {
         display: block;
         height: 75%;
+        padding: .4em;
     }
     #callToAction {
         margin-bottom: 20px;

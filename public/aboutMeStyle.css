@@ -11,8 +11,6 @@
         main {
             grid-template-columns: 12.5fr 25fr 25fr 25fr 12.5fr;
             grid-template-rows: 10vh 10vh 70vh 10vh;
-            /* onclick
-            /* grid-template-rows: 10vh 80vh 10vh */
             width: 100vw;
             align-self: flex-start;
         }
