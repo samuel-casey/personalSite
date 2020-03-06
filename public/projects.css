@@ -77,10 +77,10 @@
             font-family: Source Sans Pro;
         }
         
-        #projectDescription {
-            color: red !important;
+        .projectStatusComplete {
+            color: green;
         }
         
-        #projectStatus {
-            color: green !important;
+        .projectStatusInProgress {
+            color: goldenrod;
         }

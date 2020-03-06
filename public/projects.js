@@ -1,35 +1,43 @@
-// initial page elements
+// page elements
 const projectName = document.getElementById('projectName ')
 const moveRtBtn = document.getElementById('moveRt ')
 const moveLtBtn = document.getElementById('moveLt ')
 const projectDesktopImg = document.getElementById('projectDesktopImg ')
-const projectDescriptionId = document.getElementById('projectDescription ')
-const projectStatus = document.getElementById('projectStatus ')
+const projectDescriptionId = document.querySelector('.projectDescription ')
+const projectStatus = document.querySelector('.projectStatus ')
 
+
+// project objects
 const sampleProject = {
     title: "Sample Project",
     desktopImg: "sampleProjectDesktopImg.png",
     projectDescription: "This is a sample project description that I populated using JS",
-    projectStatus: "Status: Complete"
+    status: "Status: Complete"
 }
 
 const projectOne = {
     title: "Tides Visualizer",
     desktopImg: "tidesVisDesktopImg.png",
     projectDescription: "The tides visualizer is an app to help people feel like they're at their favorite beach on days that they can't be there. It uses data from the National Oceanographic and Astrological Association to simulate the tide rolling in and out over the course of the day.",
-    projectStatus: "Status: In Progress"
+    status: "Status: In Progress"
 }
 
-// list of project names
+// lists of object properties
 const projectNamesList = [sampleProject.title, projectOne.title]
 const projectDesktopImagesList = [sampleProject.desktopImg, projectOne.desktopImg]
 const projectDescriptionList = [sampleProject.projectDescription, projectOne.projectDescription]
-const projectStatusList = [sampleProject.projectStatus, projectOne.projectStatus]
+const projectStatusList = [sampleProject.status, projectOne.status]
 
-// helper functions for move buttons
+// helper functions for page events
 let index = 0
 
+const sleep = (milliseconds) => {
+    return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
+
 function moveRt() {
+
+
     if (index == projectNamesList.length - 1) {
         index = 0
     } else {
@@ -38,7 +46,16 @@ function moveRt() {
     projectName.innerText = projectNamesList[index]
     projectDesktopImg.src = projectDesktopImagesList[index]
     projectDescriptionId.innerText = projectDescriptionList[index]
-    projectStatus.innerText = projectStatusList[index]
+    projectStatus.innerHTML = projectStatusList[index]
+
+    if (projectStatus.innerText == "Status: Complete") {
+        projectStatus.setAttribute("style", "color: green;")
+    }
+
+    if (projectStatus.innerText == "Status: In Progress") {
+        projectStatus.setAttribute("style", "color: goldenrod;")
+    }
+
     console.log(index)
 }
 
@@ -51,9 +68,31 @@ function moveLt() {
     projectName.innerText = projectNamesList[index]
     projectDesktopImg.src = projectDesktopImagesList[index]
     projectDescriptionId.innerText = projectDescriptionList[index]
-    projectStatus.innerText = projectStatusList[index]
+    projectStatus.innerHTML = projectStatusList[index]
+
+    if (projectStatus.innerText == "Status: Complete") {
+        projectStatus.setAttribute("style", "color: green;")
+    }
+
+    if (projectStatus.innerText == "Status: In Progress") {
+        projectStatus.setAttribute("style", "color: goldenrod;")
+    }
     console.log(index)
 }
 
+function initialProjectStatusColor() {
+    if (projectStatus.innerText == "Status: Complete") {
+        projectStatus.setAttribute("style", "color: green;")
+    }
+    if (projectStatus.innerText == "Status: In Progress") {
+        projectStatus.setAttribute("style", "color: goldenrod;")
+    }
+
+}
+
+
+// add event listeners to page
+// document.addEventListener('DOMContentLoaded', projectStatusColor);
+document.addEventListener('DOMContentLoaded', initialProjectStatusColor)
 moveRtBtn.addEventListener('click', moveRt);
 moveLtBtn.addEventListener('click', moveLt);
