@@ -8,6 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
     <title>Sam's Site</title>
 
 </head>
@@ -23,30 +24,30 @@
 <!-- styling done on top of bootstrap elements is in style tags, not a separate file because I'm too lazy to make one right now -->
 <!-------------- README --------------->
 
-<body style="height: 100vh; background: #51785C; color: rgba(225, 238, 189, 0.83);">
-    <main class="cover-container d-flex h-100 p-3 mx-auto flex-column" style="justify-content: center;">
-        <div class="row justify-content-center">
+<body>
+
+    <main class="cover-container-sm d-flex  p-3 mx-auto flex-column" id="main">
+        <div class="row justify-content-center" id="greeting">
             <h1 class="text.primary">Hi!</h1>
+            <img src="thumbsUpMemoji.png" height="84px" width="76px" alt="memoji">
         </div>
 
         <div>
-            <p id="name" class="text-center">My name is Sam Casey</p>
-            <p class="text-center">Click around to learn more about me and explore some of my passion projects</p>
+            <p class="text-center" id="name">I'm Sam Casey</p>
+            <p class="text-center" id="callToAction">Click around to learn more about me and explore some of my passion projects</p>
         </div>
 
-        <div class="container">
-            <div class="row text-center">
-                <div class=" col text-center" style="flex: 2;"></div>
-                <div class=" col text-center">
-                    <a href="aboutme.html " class="btn btn-light" role="button ">About Me</a>
+        <div class="flex-container " id="buttonContainer">
+            <div class="row text-center buttons">
+                <div class=" col buttons">
+                    <a href="aboutme.html " class="btn btn-dark" role="button ">About Me</a>
                 </div>
-                <div class="col text-center">
-                    <a href="softwareprojects.html " class="btn btn-light" " role="button ">Software Projects</a>
+                <div class="col text-center buttons">
+                    <a href="softwareprojects.html " class="btn btn-dark" " role="button ">Software Projects</a>
                 </div>
-                <div class="col text-center ">
-                    <a href="writing.html " class="btn btn-light " " role="button ">Writing</a>
+                <div class="col buttons ">
+                    <a href="writing.html " class="btn btn-dark " " role="button ">Writing</a>
                 </div>
-                <div class=" col text-center" style="flex: 2;"></div>
             </div>
         </div>
     </main>

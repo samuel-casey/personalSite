@@ -1,0 +1,52 @@
+body {
+    height: 100vh;
+    background: #51785C;
+    color: rgba(225, 238, 189, 0.83);
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+#main {
+    justify-content: center;
+    justify-self: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#name {
+    font-size: 1.5em;
+    color: inherit;
+    font-style: italic;
+}
+
+#buttonContainer {
+    align-self: center;
+}
+
+#callToAction {
+    color: #FBFF22;
+}
+
+#greeting {
+    align-items: center;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    justify-self: center;
+}
+
+@media screen and (max-width: 450px) {
+    .buttons {
+        display: block;
+        height: 75%;
+    }
+    #callToAction {
+        margin-bottom: 20px;
+    }
+}
