@@ -10,14 +10,14 @@ const projectStatus = document.querySelector('.projectStatus ')
 // project objects
 const sampleProject = {
     title: "Sample Project",
-    desktopImg: "sampleProjectDesktopImg.png",
+    desktopImg: "images/sampleProjectDesktopImg.png",
     projectDescription: "This is a sample project description that I populated using JS",
     status: "Status: Complete"
 }
 
 const projectOne = {
     title: "Tides Visualizer",
-    desktopImg: "tidesVisDesktopImg.png",
+    desktopImg: "images/tidesVisDesktopImg.png",
     projectDescription: "The tides visualizer is an app to help people feel like they're at their favorite beach on days that they can't be there. It uses data from the National Oceanographic and Astrological Association to simulate the tide rolling in and out over the course of the day.",
     status: "Status: In Progress"
 }

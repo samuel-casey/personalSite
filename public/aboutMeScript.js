@@ -2,6 +2,7 @@
 // photo hover effects  //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
+
 // text for photos
 const commentaryList = document.querySelectorAll('#commentary')
 
@@ -102,3 +103,46 @@ const helperOne = function() {
 // add event listeners
 
 toggleButton.addEventListener('click', helperOne)
+
+//Jquery for window resize add/remove class
+jQuery(document).ready(function($) {
+    var alterClass = function() {
+        var ww = document.body.clientWidth;
+        if (ww < 450) {
+
+            $('#mainContainer').removeClass('main');
+            $('#mainContainer').addClass('vertical');
+
+            $('#photo1').removeClass('col-2');
+
+            $('#photo2').removeClass('col-3');
+            $('#photo2').addClass('col-1');
+
+
+            $('#photo3').removeClass('col-4');
+            $('#photo3').addClass('col-1');
+
+            $('#overlay1').removeClass('col-2');
+            $('#overlay2').removeClass('col-3');
+            $('#overlay3').removeClass('col-4');
+
+        } else if (ww >= 451) {
+
+            $('#mainContainer').addClass('main');
+            $('#mainContainer').removeClass('vertical')
+
+            $('#photo1').addClass('col-2');
+            $('#photo2').addClass('col-3');
+            $('#photo3').addClass('col-4');
+
+            $('#overlay1').addClass('col-2');
+            $('#overlay2').addClass('col-3');
+            $('#overlay3').addClass('col-4');
+        };
+    };
+    $(window).resize(function() {
+        alterClass();
+    });
+    //Fire it when the page first loads:
+    alterClass();
+});

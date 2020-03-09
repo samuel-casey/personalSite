@@ -84,3 +84,10 @@
         .projectStatusInProgress {
             color: goldenrod;
         }
+        
+        @media screen and (max-width: 450px) {
+            img {
+                width: 150px;
+                height: 101px;
+            }
+        }
