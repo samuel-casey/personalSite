@@ -1,11 +1,13 @@
-    body {
-    display: flex;
-    align-content: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-    margin: 0 !important;
-    box-sizing: border-box;
+body {
+display: flex;
+align-content: center;
+width: 100vw;
+height: 100vh;
+line-height: 1.5;
+background-color: white;
+margin: 0 !important;
+box-sizing: border-box;
+font-family: "Source Sans Pro", sans-serif;
 }
 
 p {
@@ -13,16 +15,17 @@ p {
 }
 
 ul {
-    padding-top: 10px;
+    padding-top: .25em;
     list-style: none;
     font-family: Source Sans Pro;
-    z-index: 2;
+    padding-left: 0;
+    /* z-index: 2; */
 }
 
 li {
     margin-top: 10px;
     text-decoration: none;
-    font-size: 1em
+    font-size: 1em;
 }
 
 li:hover {
@@ -35,9 +38,26 @@ a {
     color: #B58341;
 }
 
+h4 {
+    color: rgba(225, 238, 189, 0.83); 
+    font-size: 1.5em;
+    margin: 0;
+}
+
+button {
+    border: 0;
+    border-radius: 4px;
+}
+
+.navbar-nav {
+    margin: 0;
+    padding-bottom: 0.25em;
+}
+
 .main {
     grid-template-columns: 12.5fr 25fr 25fr 25fr 12.5fr;
     grid-template-rows: 10vh 10vh 70vh 10vh;
+    grid-column-gap: 10px;
     width: 100vw;
     height: 100vh;
     align-self: flex-start;
@@ -55,8 +75,9 @@ a {
 .imgOverlay {
     background-color: black;
     opacity: 0;
-    width: 95%;
-    height: fit-content;
+    /* width: 95%; */
+    height: 300px;
+    border-radius: 10px;
     z-index: 2;
     text-align: center;
     text-justify: center;
@@ -67,6 +88,10 @@ a {
     grid-row: 1 span 3;
 }
 
+.navbar-toggler-icon {
+    width: 60px;
+    height: 40px;
+}
 
 /* header */
 
@@ -176,8 +201,6 @@ a {
     border-radius: 10px;
     box-shadow: 2px 2px 3px rgba(62, 92, 71, 1);
     z-index: 1;
-    height: 70%;
-    width: 95%;
 }
 
 #toggler {
@@ -221,7 +244,13 @@ a {
     border-radius: 5%;
 }
 
+.navbar {
+    padding: .5rem 1.5rem;
+}
 
+.p-4 {
+    padding: 1.5rem;
+}
 
 /* MOBILE MOBILE MOBILE  */
 /* MOBILE MOBILE MOBILE  */
@@ -231,9 +260,9 @@ a {
     
     .main {
         grid-template-columns: 25fr 50fr 25fr;
-        grid-template-rows: 9vh 8vh 8vh 25vh 25vh 25vh;
+        grid-template-rows: 9% 8% 8% 35% 3% 35% 3% 35% 3%;
+        grid-row-gap: 5px;
         width: 100%;
-        height: 100vh;
         align-self: flex-start;
     }
     
@@ -243,26 +272,26 @@ a {
     }
     .secondLocation {
         grid-column: 2 / span 1;
-        grid-row: 5;
+        grid-row: 6;
     }
     .thirdLocation {
         grid-column: 2 / span 1;
-        grid-row: 6;
+        grid-row: 8;
     }
 
     .firstBtnLocation {
         grid-column: 2 / span 1;
-        grid-row: 4;
+        grid-row: 5;
     }
     
     .secondBtnLocation {
         grid-column: 2 / span 1;
-        grid-row: 5;
+        grid-row: 7;
     }
     
     .thirdBtnLocation {
         grid-column: 2 / span 1;
-        grid-row: 6;
+        grid-row: 9;
     }
 
     .center {
@@ -276,41 +305,25 @@ a {
     }
 
     #photos {
-        height: 70%;
-        width: 40%;
         margin: none;
         justify-self: center;
     }
 
     .imgOverlay {
-        width: 40%;
-        max-height: 110px;
+        /* width: 40%; */
         justify-self: center;
     }
 
-    #commentary {
-        font-size: .75em;
-    }
 
-    .linkBtn {
+    /* .linkBtn {
         max-width: 100px;
-    }
+    } */
 
     li {
         margin-top: 10px;
         text-decoration: none;
-        font-size: .75em
     }
 
-    #toggler {
-        height: 30px;
-        width: 45px;
-    }
-
-    #toggleButtonCollapsed {
-        height: 36.5px;
-        width: 65px;
-    }
     
     #dropdownHeader {
         color: rgba(225, 238, 189, 0.83);
