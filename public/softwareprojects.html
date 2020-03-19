@@ -5,7 +5,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
 
 
     <!-- custom css link -->
@@ -64,10 +64,10 @@
             <div class="row contentRow ">
                 <div class="col "></div>
                 <div class="col-9 projectWindow text-center container ">
-                   <div class="row h-25 projectName "  id="projectName "> SAMPLE PROJECT </div>
+                   <div class="row h-25 projectName "  id="projectName "> Sample Project </div>
                    <div class="row h-75 ">
-        <div class="col-4 d-flex-row laptop "><img src="images/sampleProjectDesktopImg.png " alt="Sample desktop image " id="projectDesktopImg "></div>
-    <div class="col-8 about ">
+        <div class="col d-flex-row laptop "><img class="laptop" src="images/sampleProjectDesktopImg.png " alt="Sample desktop image " id="projectDesktopImg "></div>
+    <div class="col about ">
         <p class="projectDescription ">This is a sample about section for a project </p>
         <p class="projectStatus ">Status: Complete</p>
     </div>
@@ -92,37 +92,46 @@
 
     </div>
 
-    <!-- button row -->
+    <!-- button grid -->
 
-    <div class="row btnRow container-fluid " class="btnImg ">
-        <div class="col text-center ">
-            <a href="https://github.com/samuel-casey " alt="GITHUB LINK ">
-                <img src="images/codeBtn.png " alt="CODE ">
-            </a>
-        </div>
-        <div class="col text-center ">
-            <a href="# " alt="PROJECT PREVIEW ">
-                <img src="images/previewBtn.png " alt="PREVIEW ">
-            </a>
-        </div>
-        <div class="col text-center ">
-            <a href="# " alt="PROJECT SITE ">
-                <img src="images/linkBtn.png " alt="LINK ">
-            </a>
-        </div>
+    <div class="btnGrid container-fluid">
+
+            <div class="codeBtnLocation text-center ">
+                <a class="codeLink" href="https://github.com/samuel-casey " alt="GITHUB LINK " target="self">
+                    <img src="images/codeBtn.png " alt="CODE ">
+                </a>
+            </div>
+
+
+            <div class="codeImgLocation text-center ">
+                <img src="images/githubBtn.png " alt="GITHUB ">
+            </div>
+
+
+            <div class="previewBtnLocation text-center ">
+                <a class="previewLink" href="# " alt="PROJECT PREVIEW " target="self">
+                    <img src="images/previewBtn.png " alt="PREVIEW ">
+                </a>
+            </div>           
+
+            <div class="previewImgLocation text-center ">
+                <img src="images/laptop.png " alt="LAUNCH PREVIEW ">
+            </div>
+
+            <div class="linkBtnLocation text-center ">
+                <a class="linkLink" href="# " alt="PROJECT SITE " target="self">
+                    <img src="images/linkBtn.png " alt="LINK ">
+                </a>
+            </div>
+
+            <div class="linkImgLocation text-center ">
+                <img src="images/internet.png " alt="SITE LINK ">
+            </div>
+
     </div>
 
-    <div class="row btnRow container-fluid ">
-        <div class="col text-center ">
-            <img src="images/githubBtn.png " alt="GITHUB ">
-        </div>
-        <div class="col text-center ">
-            <img src="images/laptop.png " alt="LAUNCH PREVIEW ">
-        </div>
-        <div class="col text-center ">
-            <img src="images/internet.png " alt="SITE LINK ">
-        </div>
-    </div>
+<!-- end button grid -->
+
     </div>
     </div>
 </body>
