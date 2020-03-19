@@ -1,0 +1,204 @@
+       
+        .codeBtnLocation {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        .codeImgLocation {
+            grid-row: 2;
+            grid-column: 1;
+        }
+
+        .previewBtnLocation {
+            grid-row: 1;
+            grid-column: 2;
+        }
+
+        .previewImgLocation {
+            grid-row: 2;
+            grid-column: 2;
+        }
+        
+        .linkBtnLocation {
+            grid-row: 1;
+            grid-column: 3;
+        }
+
+        .linkImgLocation {
+            grid-row: 2;
+            grid-column: 3;
+        }
+
+        .gridContainer {
+            height: 90vh;
+        }
+        
+        .displayContainer {
+            height: 78%;
+            width: 80vw;
+        }
+        
+        .displayBackground {
+            background-color: rgba(82, 120, 92, 1);
+            height: 100%;
+            border-top: 20px solid white;
+        }
+        
+        .gridTest {
+            border: 1px solid greenyellow;
+        }
+        
+        .btnRow {
+            height: 5vh;
+            align-content: center;
+            border-top: 15px solid white;
+        }
+        
+        .projectWindow {
+            border: 20px;
+            background-color: rgba(246, 237, 229, 1);
+            height: 85%;
+            align-self: center;
+        }
+        
+        .contentRow {
+            height: 100%;
+        }
+        
+        .toggleRow {
+            height: 8vh;
+            background-color: rgba(82, 120, 92, 1);
+            padding-bottom: 20px;
+        }
+        
+        .moveBtn {
+            border-left: 5px solid rgba(82, 120, 92, 1);
+            border-right: 5px solid rgba(82, 120, 92, 1);
+            height: 50px;
+            width: 50px;
+            padding-bottom: 15px;
+        }
+        
+        .projectImg {
+            margin-top: 10%;
+            margin-bottom: 15%
+        }
+        
+        .iPhone {
+            color: black;
+            background-color: blue;
+        }
+        
+        .laptop {
+            align-self: center;
+        }
+
+        
+        .about {
+            text-align: left;
+            font-size: 100%;
+        }
+        
+        .projectName {
+            align-content: center;
+            justify-content: center;
+            color: rgba(181, 131, 65, 1);
+            font-size: 2em;
+            font-weight: bold;
+            font-family: Source Sans Pro;
+        }
+        
+        .projectStatusComplete {
+            color: green;
+        }
+        
+        .projectStatusInProgress {
+            color: goldenrod;
+        }
+
+        .btnGrid {
+            display: grid;
+            grid-template-rows: 50fr 50fr;
+            grid-template-columns: 33fr 33fr 33fr;
+            height: fit-content; 
+            padding-top: 1%;
+            margin-left: 3.5% !important; 
+            max-width: 90%;
+        }
+
+        .col {
+            padding: 0 !important;
+        }
+        
+        @media screen and (max-width: 700px) and (min-width: 450px) {
+            img.laptop {
+                height: 160px;
+                width: 240px;
+                }
+            
+            .about {
+                font-size: 90%;
+            }
+
+            .btnGrid {
+                max-width: 85%;
+            }
+        }
+        
+        @media screen and (max-width: 450px) {
+            /* img {
+                width: 74%;
+                height: 50%;
+            } */
+
+            .about {
+                text-align: justify;
+                font-size: 75%;
+            }
+
+            img.laptop {
+            height: 110px;
+            width: 165px;
+            }
+
+            .btnGrid {
+                grid-template-rows: repeat(6, 16.5fr);
+                grid-template-columns: 100fr;
+                height: fit-content; 
+                margin-left: 1.5% !important;
+            }
+
+            .gridContainer {
+                height: 80vh;
+            }
+
+            .codeBtnLocation {
+                grid-row: 1;
+                grid-column: 1;
+            }
+    
+            .codeImgLocation {
+                grid-row: 2;
+                grid-column: 1;
+            }
+    
+            .previewBtnLocation {
+                grid-row: 3;
+                grid-column: 1;
+            }
+    
+            .previewImgLocation {
+                grid-row: 4;
+                grid-column: 1;
+            }
+            
+            .linkBtnLocation {
+                grid-row: 5;
+                grid-column: 1;
+            }
+    
+            .linkImgLocation {
+                grid-row: 6;
+                grid-column: 1;
+            }
+        }

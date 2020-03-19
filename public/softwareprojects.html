@@ -5,12 +5,18 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="projects.css" type="text/css">
+
+    <!-- link to js file used for scrolling projects  -->
+    <script src="./projects.js" defer></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Sam's Software Projects</title>
-    <link href="stylesheet_index.css" rel="stylesheet" type="text/css">
 
 </head>
 <!-- Optional JavaScript -->
@@ -45,15 +51,89 @@
         <nav class="navbar" style="background-color: #51785C; color:rgba(170, 85, 6, 0.65);">
             <button class="navbar-toggler" style="background-color: rgba(225, 238, 189, 0.83);" type="button" data-toggle="collapse" " data-target="#navbarToggleExternalContent " aria-controls="navbarToggleExternalContent " aria-expanded="false "
             aria-label="Toggle navigation " >
-        <div class="navbar-toggler-icon " style="background-image: url(customToggler.png); height: 40px; width: 60px; justify-self: flex-end; "></div>
+        <div class="navbar-toggler-icon " style="background-image: url(images/customToggler.png); height: 40px; width: 60px; justify-self: flex-end; "></div>
       </button>
     </nav> 
 
 </div>
 <!-- END NAVBAR -->
+<div class="container-fluid gridContainer ">
+    <div class="row displayContainer container-fluid ">
+        <div class="col "></div>
+        <div class="col-9 displayBackground container ">
+            <div class="row contentRow ">
+                <div class="col "></div>
+                <div class="col-9 projectWindow text-center container ">
+                   <div class="row h-25 projectName "  id="projectName "> Sample Project </div>
+                   <div class="row h-75 ">
+        <div class="col d-flex-row laptop "><img class="laptop" src="images/sampleProjectDesktopImg.png " alt="Sample desktop image " id="projectDesktopImg "></div>
+    <div class="col about ">
+        <p class="projectDescription ">This is a sample about section for a project </p>
+        <p class="projectStatus ">Status: Complete</p>
+    </div>
+    </div>
+    </div>
+    <div class="col "></div>
+    </div>
+    </div>
+    <div class="col "></div>
+    </div>
 
-    <h1 id="fillerText ">
-        Projects go here
-    </h1>
+    <!-- toggler row -->
 
+    <div class="row container-fluid text-center ">
+        <div class="col "></div>
+        <div class="col-9 toggleRow ">
+            <img class="moveBtn " id="moveLt " src="images/moveLt.png " alt="moveLt ">
+            <img class="moveBtn " id="moveRt " src="images/moveRt.png " alt="moveRt ">
+        </div>
+        <div class="col "></div>
+
+
+    </div>
+
+    <!-- button grid -->
+
+    <div class="btnGrid container-fluid">
+
+            <div class="codeBtnLocation text-center ">
+                <a class="codeLink" href="https://github.com/samuel-casey " alt="GITHUB LINK " target="self">
+                    <img src="images/codeBtn.png " alt="CODE ">
+                </a>
+            </div>
+
+
+            <div class="codeImgLocation text-center ">
+                <img src="images/githubBtn.png " alt="GITHUB ">
+            </div>
+
+
+            <div class="previewBtnLocation text-center ">
+                <a class="previewLink" href="# " alt="PROJECT PREVIEW " target="self">
+                    <img src="images/previewBtn.png " alt="PREVIEW ">
+                </a>
+            </div>           
+
+            <div class="previewImgLocation text-center ">
+                <img src="images/laptop.png " alt="LAUNCH PREVIEW ">
+            </div>
+
+            <div class="linkBtnLocation text-center ">
+                <a class="linkLink" href="# " alt="PROJECT SITE " target="self">
+                    <img src="images/linkBtn.png " alt="LINK ">
+                </a>
+            </div>
+
+            <div class="linkImgLocation text-center ">
+                <img src="images/internet.png " alt="SITE LINK ">
+            </div>
+
+    </div>
+
+<!-- end button grid -->
+
+    </div>
+    </div>
 </body>
+
+</html>
