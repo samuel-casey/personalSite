@@ -143,6 +143,12 @@
             .btnGrid {
                 max-width: 85%;
             }
+
+            .displayBackground {
+                background-color:rgba(246, 237, 229, 1);
+                border: solid 2px rgba(82, 120, 92, 1);
+                margin: 2px;
+            }
         }
         
         @media screen and (max-width: 450px) {
@@ -200,5 +206,11 @@
             .linkImgLocation {
                 grid-row: 6;
                 grid-column: 1;
+            }
+
+            .displayBackground {
+                background-color:rgba(246, 237, 229, 1);
+                border: solid 2px rgba(82, 120, 92, 1);
+                margin: 2px;
             }
         }

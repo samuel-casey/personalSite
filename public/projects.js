@@ -35,12 +35,23 @@ const projectOne = {
 
 }
 
+const projectTwo = {
+    title: "Tides 2", 
+    desktopImg: "images/tidesVisDesktopImg.png",
+    projectDescription: "The tides visualizer is an app to help people feel like they're at their favorite beach on days that they can't be there. It uses data from the National Oceanographic and Astrological Association to simulate the tide rolling in and out over the course of the day.",
+    status: "Status: Complete",
+    link: "",
+    preview: "",
+    code: ""
+
+}
+
 /////////////////////////////////////////////////////////////////////////
 
-const projectList = [sampleProject, projectOne]
+const projectList = [sampleProject, projectOne, projectTwo]
 
 // lists of object properties
-const projectNamesList = [sampleProject.title, projectOne.title]
+const projectNamesList = [sampleProject.title, projectOne.title, projectTwo.title]
 const projectDesktopImagesList = [sampleProject.desktopImg, projectOne.desktopImg]
 const projectDescriptionList = [sampleProject.projectDescription, projectOne.projectDescription]
 const projectStatusList = [sampleProject.status, projectOne.status]
@@ -155,7 +166,7 @@ function buttonAlerts(project) {
             alert("No public repository available for this project yet. Check back in a few weeks!");
             e.preventDefault()
             return false
-        } else if (project.preview != "" && projectName.innerText.toUpperCase() === project.title.toUpperCase()) {
+        } else if (projectName.innerText.toUpperCase() === project.title.toUpperCase()) {
             previewLink.setAttribute("href", project.preview);
             previewLink.setAttribute("target", "blank")
             console.log("changed previewLink")

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- The first thing in any HTML file should be the charset -->
+  <meta charset="utf-8">
+
+  <!-- Make the page mobile compatible -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Allow installing the app to the homescreen -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <link rel="icon" href="%PUBLIC_URL%/thumbsUpMemoji.png" />
+  <title>Sam's Admin Site</title>
+</head>
+
+<body>
+  <!-- Display a message if JS has been disabled on the browser. -->
+  <noscript>If you're seeing this message, that means
+    <strong>JavaScript has been disabled on your browser</strong>, please
+    <strong>enable JS</strong> to make this app work.</noscript>
+
+    <!-- The app hooks into this div -->
+    <h1>Admin</h1>
+
+    <form action="/admin.js">
+    <label>Email</label><input class="email" /><br>
+    <label>Password</label><input class="password" /><br>
+    <button class="submit" type="submit">Submit</button>
+    </form>
+    
+    <div id="root"></div>    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-functions.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCIGp60bXHkC7ssMBFX5sAtBnD6vbIpfWU",
+    authDomain: "personalsite-35a38.firebaseapp.com",
+    databaseURL: "https://personalsite-35a38.firebaseio.com",
+    projectId: "personalsite-35a38",
+    storageBucket: "personalsite-35a38.appspot.com",
+    messagingSenderId: "933460557734",
+    appId: "1:933460557734:web:714421b5ce76c1ad9bd967",
+    measurementId: "G-3BHK9Q0JWL"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+</body>
+</html>
