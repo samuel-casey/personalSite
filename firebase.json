@@ -11,8 +11,13 @@
     },
     "hosting": {
         "public": "public",
+        // "redirects": [{
+        //     "source:": "*/",
+        //     "destination": "../functions/admin",
+        //     "status": 301
+        // }],
         "rewrites": [{
-            "source:": "/index.html",
+            "source": "**",
             "function": "app"
         }],
         "ignore": [

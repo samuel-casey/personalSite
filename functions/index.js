@@ -9,6 +9,7 @@ app.engine('ejs', engines.ejs)
 app.set('views', __dirname + '/html')
 app.set('view engine', 'ejs')
 
+app.use(express.static(__dirname));
 
 app.get('/admin', function(request, response) {
   response.render('admin');
