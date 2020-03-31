@@ -8,6 +8,24 @@ h1 {
     font-size: 3.5em;
 }
 
+a {
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: rgba(181, 131, 65, .37);
+    border-radius: 10px 0px;
+    width: 130px; 
+    text-align: center;
+    align-content: center;
+    padding: 2px;
+}
+
+a:hover {
+    color:  #51785C;
+    background-color: rgba(225, 238, 189, 0.83);
+    border-radius: 10px 0px;
+    text-decoration: none;
+}
+
 #main {
     justify-content: center;
     justify-self: center;
@@ -39,6 +57,14 @@ h1 {
     justify-content: center;
     max-width: 500px;
     justify-self: center;
+}
+
+.iBtn {
+    
+}
+
+.iBtn:hover{
+    
 }
 
 @media screen and (max-width: 450px) {
