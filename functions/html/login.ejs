@@ -11,6 +11,16 @@
   <meta name="mobile-web-app-capable" content="yes">
 
   <link rel="icon" href="%PUBLIC_URL%/thumbsUpMemoji.png" />
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+   <!-- Bootstrap JS -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
   <title>Sam's Admin Site</title>
 </head>
 
@@ -20,16 +30,20 @@
     <strong>JavaScript has been disabled on your browser</strong>, please
     <strong>enable JS</strong> to make this app work.</noscript>
 
-    <!-- The app hooks into this div -->
-    <h1>Administration</h1>
+    <h1>Site Admin</h1>
 
-    <form action="#">
+    <form id="login-form" onSubmit="handleEmailLogin()" action="#">
     <label>Email</label><input class="email" /><br>
     <label>Password</label><input class="password" /><br>
-    <button class="submit" type="submit">Submit</button>
+    <button class="btn btn-primary" type="submit">Submit Email and Password Login</button>
     </form>
+
+    <button class="btn btn-outline-primary" onclick="handleGoogleLogin()">Login with Google</button>
     
     <div id="root"></div>    
+
+    <!-- START OF SCRIPT TAGS -->
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
 
@@ -39,10 +53,11 @@
 <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
 
 <script>
   // Your web app's Firebase configuration
-  const firebaseConfig = {
+  var firebaseConfig = {
     apiKey: "AIzaSyCIGp60bXHkC7ssMBFX5sAtBnD6vbIpfWU",
     authDomain: "personalsite-35a38.firebaseapp.com",
     databaseURL: "https://personalsite-35a38.firebaseio.com",
@@ -52,7 +67,9 @@
     appId: "1:933460557734:web:714421b5ce76c1ad9bd967",
     measurementId: "G-3BHK9Q0JWL"
   };
-  firebase.initializeApp(config);
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
 </script>
 <script src="/admin.js"></script>
 </body>

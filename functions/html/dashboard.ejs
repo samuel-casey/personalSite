@@ -1,0 +1,68 @@
+<html>
+<head>
+    <!-- The first thing in any HTML file should be the charset -->
+    <meta charset="utf-8">
+  
+    <!-- Make the page mobile compatible -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- Allow installing the app to the homescreen -->
+    <meta name="mobile-web-app-capable" content="yes">
+  
+    <link rel="icon" href="%PUBLIC_URL%/thumbsUpMemoji.png" />
+  
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+     <!-- Bootstrap JS -->
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+    <title>Sam's Admin Site</title>
+  </head>
+
+<body>
+
+<h1>Upload a new post to writing page</h1>
+<form onSubmit='handleWritingSubmission()' action='#'>
+    <label>Post Title:</label><br>
+    <input id='post-title'></input><br>
+    <label>Post Body: </label><br>
+    <textarea id='post-body'></textarea><br><br>
+    <button type='submit' action='#' class='btn btn-dark'>Upload new post</button>
+</form>
+
+<div id="uploadMsg"></div>
+
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCIGp60bXHkC7ssMBFX5sAtBnD6vbIpfWU",
+    authDomain: "personalsite-35a38.firebaseapp.com",
+    databaseURL: "https://personalsite-35a38.firebaseio.com",
+    projectId: "personalsite-35a38",
+    storageBucket: "personalsite-35a38.appspot.com",
+    messagingSenderId: "933460557734",
+    appId: "1:933460557734:web:714421b5ce76c1ad9bd967",
+    measurementId: "G-3BHK9Q0JWL"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="/admin.js"></script>
+</body>
+
+</html>

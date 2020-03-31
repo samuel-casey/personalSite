@@ -11,9 +11,13 @@ app.set('view engine', 'ejs')
 
 app.use(express.static(__dirname));
 
-app.get('/admin', function(request, response) {
-  response.render('admin');
+app.get('/login', function(request, response) {
+  response.render('login');
 });
+
+app.get('/dashboard', function(request, response) {
+  response.render('dashboard')
+})
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
