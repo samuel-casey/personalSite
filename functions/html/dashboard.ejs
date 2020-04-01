@@ -23,16 +23,25 @@
     <title>Sam's Admin Site</title>
   </head>
 
-<body>
+<body style="padding: 20px;"> 
 
-<h1>Upload a new post to writing page</h1>
-<form onSubmit='handleWritingSubmission()' action='#'>
-    <label>Post Title:</label><br>
+<h3>Upload a new post to writing page</h3>
+
+<p style="color: gray">Signed in as: <span id="currentUser" style="color: navy"></span></p>
+
+<div style="color: green; background: silver; font-size: 0.75em;">
+    <b>Existing posts (titles)</b>
+    <ol id="existingPosts" style="list-style-type: upper-roman; margin: 0;"></ol>
+</div>
+
+<form id="uploadForm" onSubmit='handleWritingSubmission()' action='#'>
+    <label style="color: blue">New Post Title:</label><br>
     <input id='post-title'></input><br>
-    <label>Post Body: </label><br>
-    <textarea id='post-body'></textarea><br><br>
+    <label style="color: blue">New Post Body: </label><br>
+    <textarea style="width: 60vw"id='post-body'></textarea><br><br>
     <button type='submit' action='#' class='btn btn-dark'>Upload new post</button>
 </form>
+<p style="font-size: .75em; font-style: italic; color: red">After posting, wait for success message before leaving page to ensure proper upload</p>
 
 <div id="uploadMsg"></div>
 

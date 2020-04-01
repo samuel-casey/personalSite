@@ -1,3 +1,25 @@
+$(document).ready(function() {
+  if (window.location.pathname === "/dashboard"){
+    existingPosts()
+    showUser()
+  }
+});
+
+function existingPosts() {
+  return firebase.database().ref("writing").once('value').then(function(snapshot) {
+    var posts = snapshot.val();
+
+    for (var postKey in posts) {
+        var post = posts[postKey];
+        $("#existingPosts").append(`<li>${post.title}</li>`)
+      }
+})
+}
+
+function showUser() {
+  $("#currentUser").text(currentUser) 
+}
+
 function handleGoogleLogin() {
   console.log('Login w/ Google button pressed.')
   
@@ -24,26 +46,43 @@ function handleGoogleLogin() {
   });
 }
 
-function sendToDashboard() {
+function sendToDashboard(user) {
   var url= "/dashboard"; 
-  window.location = url; 
+  window.location.pathname = url; 
 }
+
+
 
 function handleEmailLogin() {
   var email = document.querySelector('.email').value 
   var password = document.querySelector('.password').value
-  console.log('Login w/ Email button pressed.')
-  
+ 
   firebase.auth().signInWithEmailAndPassword(email, password)
-  .then(sendToDashboard)
   .catch((error) => alert(`An error ocurred while signing in -- ${error.message} (Error code: ${error.code})`))
+  
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      sendToDashboard(user)
+      console.log(`${user.email} logging in w/ password`)
+      return currentUser = user
+    } else {
+      console.log(error)
+    }
+})
 }
 
+
 function uploadWriting(postTitle, postBody) {
+    
     var postData = {
       title: postTitle,
       body: postBody
     }
+
+    function popup(){
+      alert("Post successful!")
+    }
+
     var database = firebase.database().ref("writing")
     var newPostRef = database.push();
     newPostRef.set(postData, function(error) {
@@ -51,14 +90,21 @@ function uploadWriting(postTitle, postBody) {
         console.error(error);
         alert("Something went wrong. See dev console for additional detail on error.")
       } else {
-        var successMsg = `<h5>Successfully uploaded ${postTitle} to <a target='blank' href='../writing.html'>writing</a> page.</h5>`
+        var successMsg = `<p>Successfully uploaded <b>${postTitle}</b> to <a target='blank' onclick='window.location.reload()' href='../writing.html'>writing</a> page.</p>`
+        popup()
         $("#uploadMsg").append(successMsg)
+        $("#existingPosts").append(`<li>${postTitle}</li>`)
+        $("#uploadForm").trigger("reset")
       }
-    });
-  }
+  })
+}
 
 function handleWritingSubmission() {
   var postTitle = $("#post-title").val()
   var postBody = $("#post-body").val()
-  uploadWriting(postTitle, postBody)
+  if (postTitle != null && postTitle != "" && postBody != null && postBody != "") {
+    uploadWriting(postTitle, postBody)
+  } else {
+    alert("You left something blank.")
+  }
 }
