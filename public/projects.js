@@ -1,9 +1,9 @@
 // page elements
-const projectName = document.getElementById('projectName ')
-const moveRtBtn = document.getElementById('moveRt ')
-const moveLtBtn = document.getElementById('moveLt ')
+const projectName = document.querySelector('#projectName ')
+const moveRtButton = document.getElementById('moveRt ')
+const moveLtButton = document.getElementById('moveLt ')
 
-const projectDesktopImg = document.getElementById('projectDesktopImg ')
+const projectImg = document.getElementById('projectDesktopImg ')
 const projectDescriptionId = document.querySelector('.projectDescription ')
 const projectStatus = document.querySelector('.projectStatus ')
 
@@ -52,7 +52,7 @@ const projectList = [sampleProject, projectOne, projectTwo]
 
 // lists of object properties
 const projectNamesList = [sampleProject.title, projectOne.title, projectTwo.title]
-const projectDesktopImagesList = [sampleProject.desktopImg, projectOne.desktopImg]
+const projectDesktopImagesList = [sampleProject.desktopImg, projectOne.desktopImg, projectTwo.desktopImg]
 const projectDescriptionList = [sampleProject.projectDescription, projectOne.projectDescription]
 const projectStatusList = [sampleProject.status, projectOne.status]
 
@@ -78,8 +78,8 @@ function moveRt() {
         index += 1
     }
     proj = projectList[index]
-    projectName.innerText = projectNamesList[index]
-    projectDesktopImg.src = projectDesktopImagesList[index]
+    projectName.innerHTML = projectNamesList[index]
+    projectImg.src = projectDesktopImagesList[index]
     projectDescriptionId.innerText = projectDescriptionList[index]
     projectStatus.innerHTML = projectStatusList[index]
     // linkLink.href = projectLinkList[index]
@@ -111,8 +111,8 @@ function moveLt() {
         index -= 1
     }
     
-    projectName.innerText = projectNamesList[index]
-    projectDesktopImg.src = projectDesktopImagesList[index]
+    projectName.innerHTML = projectNamesList[index]
+    projectImg.src = projectDesktopImagesList[index]
     projectDescriptionId.innerText = projectDescriptionList[index]
     projectStatus.innerHTML = projectStatusList[index]
     // linkLink.href = projectLinkList[index]
@@ -185,38 +185,38 @@ function initialProjectStatusColor() {
     }
 }
 
-// JS to make page more responsive
-jQuery(document).ready(function($) {
-        var alterClass = function() {
-            var ww = document.body.clientWidth;
-            if (ww < 450) {
+// // JS to make page more responsive
+// jQuery(document).ready(function($) {
+//         var alterClass = function() {
+//             var ww = document.body.clientWidth;
+//             if (ww < 450) {
     
-                $('.projectWindow').removeClass('col-10');
-                $('.projectWindow').removeClass('col-9');
-                $('.projectWindow').addClass('col-11');
+//                 $('.projectWindow').removeClass('col-10');
+//                 $('.projectWindow').removeClass('col-9');
+//                 $('.projectWindow').addClass('col-11');
     
-            } else if (ww >= 451 && ww < 700) {
+//             } else if (ww >= 451 && ww < 700) {
     
-                $('.projectWindow').removeClass('col-9');
-                $('.projectWindow').removeClass('col-11');
-                $('.projectWindow').addClass('col-10');
-            } else if (ww >= 701) {
+//                 $('.projectWindow').removeClass('col-9');
+//                 $('.projectWindow').removeClass('col-11');
+//                 $('.projectWindow').addClass('col-10');
+//             } else if (ww >= 701) {
     
-                $('.projectWindow').removeClass('col-10');
-                $('.projectWindow').removeClass('col-11');
-                $('.projectWindow').addClass('col-9');
-            };
-        };
-        $(window).resize(function() {
-            alterClass();
-        });
-        //Fire it when the page first loads:
-        alterClass();
-    });
+//                 $('.projectWindow').removeClass('col-10');
+//                 $('.projectWindow').removeClass('col-11');
+//                 $('.projectWindow').addClass('col-9');
+//             };
+//         };
+//         $(window).resize(function() {
+//             alterClass();
+//         });
+//         //Fire it when the page first loads:
+//         alterClass();
+//     });
 
 // add event listeners to page
 // document.addEventListener('DOMContentLoaded', projectStatusColor);
 document.addEventListener('DOMContentLoaded', initialProjectStatusColor)
 document.addEventListener('DOMContentLoaded', buttonAlerts(proj))
-moveRtBtn.addEventListener('click', moveRt);
-moveLtBtn.addEventListener('click', moveLt);
+moveRtButton.addEventListener('click', moveRt);
+moveLtButton.addEventListener('click', moveLt);
