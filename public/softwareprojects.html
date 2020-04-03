@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="projects.css" type="text/css">
 
     <!-- link to js file used for scrolling projects  -->
-    <script src="./projects.js" defer></script>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -25,7 +24,33 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCIGp60bXHkC7ssMBFX5sAtBnD6vbIpfWU",
+    authDomain: "personalsite-35a38.firebaseapp.com",
+    databaseURL: "https://personalsite-35a38.firebaseio.com",
+    projectId: "personalsite-35a38",
+    storageBucket: "personalsite-35a38.appspot.com",
+    messagingSenderId: "933460557734",
+    appId: "1:933460557734:web:714421b5ce76c1ad9bd967",
+    measurementId: "G-3BHK9Q0JWL"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="./projects.js" defer></script>
 <body>
     <!-- NAVBAR -->
     <div class="pos-f-t">
@@ -58,75 +83,10 @@
 </div>
 <!-- END NAVBAR -->
 
-<div class="outerBox">
-<div class="container-fluid contentGrid ">
-    <!-- left col -->
-    <div class="outline leftCol"></div>
-    <!-- center col -->
-    <div class="contentCol outline projectsTop"></div>
-    <div class="contentCol paper projectName" id="projectName">
-        Title
-    </div>
-    <div class="contentCol paper projectImg">
-        <img class="laptop" src="images/sampleProjectDesktopImg.png " alt="Sample desktop image " id="projectDesktopImg ">
-    </div>
-    <div class="contentCol paper projectDescription">
-        A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to
-    </div>
-    <div class="contentCol paper projectStatus">
-        Status:
-    </div>
-    <div class="contentCol outline btnRow">
-        <div>
-            <img class="moveBtn " id="moveLt " src="images/moveLt.png " alt="moveLt ">
-            <img class="moveBtn " id="moveRt " src="images/moveRt.png " alt="moveRt ">
-        </div>
-        <p>project x of y</p>
-    </div>
-    <div class="contentCol outline projectsBottom"></div>
-    <!-- right col -->
-    <div class="outline rightCol"></div>
-    <!-- button grid --
-
-<!-- end button grid -->
+<div class="outerBox" id="root">
 
 </div>
 
-<div class="btnGrid container-fluid">
-
-        <div class="codeBtnLocation text-center ">
-            <a class="codeLink" href="https://github.com/samuel-casey " alt="GITHUB LINK " target="self">
-                <img src="images/codeBtn.png " alt="CODE ">
-            </a>
-        </div>
-
-
-        <div class="codeImgLocation text-center ">
-            <img src="images/githubBtn.png " alt="GITHUB ">
-        </div>
-
-
-        <div class="previewBtnLocation text-center ">
-            <a class="previewLink" href="# " alt="PROJECT PREVIEW " target="self">
-                <img src="images/previewBtn.png " alt="PREVIEW ">
-            </a>
-        </div>           
-
-        <div class="previewImgLocation text-center ">
-            <img src="images/laptop.png " alt="LAUNCH PREVIEW ">
-        </div>
-
-        <div class="linkBtnLocation text-center ">
-            <a class="linkLink" href="# " alt="PROJECT SITE " target="self">
-                <img src="images/linkBtn.png " alt="LINK ">
-            </a>
-        </div>
-
-        <div class="linkImgLocation text-center ">
-            <img src="images/internet.png " alt="SITE LINK ">
-        </div>
-
-</div>
 </div>
     </div>
 </body>

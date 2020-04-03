@@ -108,3 +108,29 @@ function handleWritingSubmission() {
     alert("You left something blank.")
   }
 }
+
+////////////// projects ////////////////////////////////////
+
+function addProject(pTitle, pImg, pDescription, pStatus, pLink, pPreview, pCode){
+    
+  var projectData = {
+      title: pTitle, // Tic-Tac-Bananas
+      desktopImg: pImg, // public/images/ticTacBananas.png
+      projectDescription: pDescription, // Tic-Tac-Toe but with Bananas
+      status: pStatus, // "Status: In Progress"
+      link: pLink, // ""
+      preview: pPreview, // ""
+      code: pCode // ""
+  }
+
+  var database = firebase.database().ref("projects")
+  var newPostRef = database.push();
+  newPostRef.set(projectData, function(error) {
+    if (error) {
+      console.error(error);
+      alert("Something went wrong. See dev console for additional detail on error.")
+    } else {
+      window.location.reload()
+    }
+  });
+}

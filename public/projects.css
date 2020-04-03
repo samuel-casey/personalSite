@@ -262,3 +262,19 @@
                 margin: 2px;
             }
         }
+
+        .loader {
+            border: 16px solid  rgba(225, 238, 189, 0.83); /* Light grey */
+            border-top: 16px solid #51785C; /* Blue */
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            margin: 10px 0 0 10px;
+            animation: spin 2s linear infinite;
+            justify-self: center;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }

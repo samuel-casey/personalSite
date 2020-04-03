@@ -1,5 +1,3 @@
-
-
 $(document).ready(() => {
     var loader = "<div id='loadBox'><div class='loader'></div><br><p>loading writing...</p></div>"
     $("#base").append(loader)
@@ -9,18 +7,15 @@ $(document).on('load', getWriting().then(displayWriting))
 
 function displayWriting() {
 
-
-    
-
     $("#base").detach()
     // loop to attach new containers for length of post list
     for (var i = 0; i < postList.length; i++) {
 
         var postContent = {
-            title : postList[i].title,
-            body : postList[i].body
-        }
-
+            title: postList[i].title,
+            body: postList[i].body
+          }
+    
         var newPost = `<div class="container onePost">
         <h1 class="postTitle">${postContent.title}</h1>
         <div class="cotainer-fluid postBG"> 
@@ -47,7 +42,4 @@ function getWriting() {
           }
         console.log(postList)
       });  
-
-      
-   
 }
