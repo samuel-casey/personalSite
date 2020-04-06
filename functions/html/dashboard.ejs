@@ -4,8 +4,8 @@
     <meta charset="utf-8">
   
     <!-- Make the page mobile compatible -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+    <meta name="viewport" content="width=dev  ice-width, initial-scale=1">
+    
     <!-- Allow installing the app to the homescreen -->
     <meta name="mobile-web-app-capable" content="yes">
   
@@ -23,27 +23,60 @@
     <title>Sam's Admin Site</title>
   </head>
 
-<body style="padding: 20px;"> 
-
-<h3>Upload a new post to writing page</h3>
-
-<p style="color: gray">Signed in as: <span id="currentUser" style="color: navy"></span></p>
-
+<body style="padding: 20px;" onbeforeunload="logOutUser()"> 
+<p style="color: gray">Logged in as: <span id="currentUser" style="color: navy"></span><span>  <button class="btn btn-outline-dark" style="height: 17px !important; width: 40px !important; font-size: .5em !important; padding: 0 !important" onclick="logOutUser()">Log out</button></span></p>
+<div id="formsContainer">
+<div id="writingSection">
+<h3 style="background-color: lightgoldenrodyellow;">Upload a new post to writing page</h3>
 <div style="color: green; background: silver; font-size: 0.75em;">
-    <b>Existing posts (titles)</b>
+    <b>Existing Writing Posts (titles)</b>
     <ol id="existingPosts" style="list-style-type: upper-roman; margin: 0;"></ol>
 </div>
 
-<form id="uploadForm" onSubmit='handleWritingSubmission()' action='#'>
+<form id="writingForm" onSubmit='handleWritingSubmission()' action='#'>
     <label style="color: blue">New Post Title:</label><br>
     <input id='post-title'></input><br>
     <label style="color: blue">New Post Body: </label><br>
     <textarea style="width: 60vw"id='post-body'></textarea><br><br>
-    <button type='submit' action='#' class='btn btn-dark'>Upload new post</button>
+    <button type='submit' action='#' class='btn btn-dark'>Upload new writing</button>
 </form>
 <p style="font-size: .75em; font-style: italic; color: red">After posting, wait for success message before leaving page to ensure proper upload</p>
 
-<div id="uploadMsg"></div>
+<div id="wUploadMsg"></div>
+</div>
+
+<div id="projectSection">
+  <h3 style="background-color: lightcyan">Upload a new post to projects page</h3>
+
+  <div style="color: green; background: silver; font-size: 0.75em;">
+      <b>Existing Projects (titles)</b>
+      <ol id="existingProjects" style="list-style-type: upper-roman; margin: 0;"></ol>
+  </div><br>
+  
+  <p style="font-style: italic; color: red">* indicates required field</p>
+  <form id="projectForm" onSubmit='handleProjectSubmission()' action='#'>      
+      <label style="color: blue"><span style="color: red">*</span>New Project Title:</label><br>
+      <input id='project-title'></input><br>
+      <label style="color: blue"><span style="color: red">*</span>New Project Status: </label><br>
+      <select id='project-status-select'><option></option><option value="Status: Complete">Status: Complete</option><option value="Status: In Progress">Status: In Progress</option></select><br>
+      <label style="color: blue"><span style="color: red">*</span>New Project Description: </label><br>
+      <textarea style="width: 60vw;" id="project-description"></textarea><br>
+      <label style="color: blue">Path to New Project Image (must be in correct folder on site filesystem):</label><br>
+      <input style="width: 60vw;" id="project-img-path"></input><br>
+      <label style="color: blue">Link to New Project Site: </label><br>
+      <input style="width: 60vw;" id="project-link"></input><br>
+      <label style="color: blue">Link to New Project Repository: </label><br>
+      <input style="width: 60vw;" id="project-code"></input><br>
+      <label style="color: blue">Link to New Project Preview: </label><br>
+      <input style="width: 60vw;" id="project-preview"></input><br>
+      <br><button type='submit' action='#' class='btn btn-dark'>Upload new project</button>
+  </form>
+  <p style="font-size: .75em; font-style: italic; color: red">After posting, wait for success message before leaving page to ensure proper upload</p>
+  
+  <div id="pUploadMsg"></div>
+
+</div>
+</div>
 
 <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
 
