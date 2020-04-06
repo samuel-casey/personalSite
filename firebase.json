@@ -11,15 +11,14 @@
     },
     "hosting": {
         "public": "public",
-        // "redirects": [{
-        //     "source:": "*/",
-        //     "destination": "../functions/admin",
-        //     "status": 301
-        // }],
         "rewrites": [{
             "source": "**",
             "function": "app"
-        }],
+        }, {
+            "source": "/login",
+            "destination": "../functions/html/login.ejs"
+        }
+    ],
         "ignore": [
             "firebase.json",
             "**/.*",

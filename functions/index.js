@@ -1,7 +1,8 @@
   
 const functions = require('firebase-functions');
 const express = require('express');
-const engines = require('consolidate')
+const ejs = require('ejs');
+const engines = require('consolidate');
 
 const app = express();
 
