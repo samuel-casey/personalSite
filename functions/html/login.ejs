@@ -34,11 +34,11 @@
 
     <form id="login-form" onSubmit="handleEmailLogin()" action="#">
     <label>Email</label><input class="email" /><br>
-    <label>Password</label><input class="password" /><br>
+    <label>Password</label><input class="password" type="password"/><br>
     <button class="btn btn-outline-success" type="submit">Submit Email and Password Login</button>
     </form>
 
-    <button class="btn btn-outline-primary" onclick="handleGoogleLogin()">Login with Google</button>
+    <button type="button" class="btn btn-outline-primary" onclick="handleGoogleLogin()">Login with Google</button>
     
     <div id="root"></div>    
 

@@ -91,19 +91,20 @@ function sendToDashboard(user) {
 function handleEmailLogin() {
   var email = document.querySelector('.email').value 
   var password = document.querySelector('.password').value
-
-  firebase.auth().signInWithEmailAndPassword(email, password)
-  .catch((error) => alert(`An error ocurred while signing in -- ${error.message} (Error code: ${error.code})`))
   
-  firebase.auth().onAuthStateChanged(function(user, error) {
+  firebase.auth().signInWithEmailAndPassword(email, password).then((user) => {firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      sendToDashboard(user)
-      console.log(`${user.email} logging in w/ password`)
+      console.log(`user email = ${user.email}`)
+      return sendToDashboard(user)
     } else {
       console.log(error)
     }
-})
+})} )
+  .catch((error) => alert(`An error ocurred while signing in -- ${error.message} (Error code: ${error.code})`))
+
+
 }
+
 
 function uploadWriting(postTitle, postBody) {
     
