@@ -1,0 +1,280 @@
+        .projectDescription {
+            padding: 10px;
+        }
+
+        .projectsTop {
+            grid-row: 1;
+            min-height: 3px;
+        }
+
+        .projectsBottom {
+            grid-row: 7;
+            min-height: 3px;
+        }
+
+        .projectImg {
+            text-align: center;
+        }
+
+        .codeBtnLocation {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        .codeImgLocation {
+            grid-row: 2;
+            grid-column: 1;
+        }
+
+        .previewBtnLocation {
+            grid-row: 1;
+            grid-column: 2;
+        }
+
+        .previewImgLocation {
+            grid-row: 2;
+            grid-column: 2;
+        }
+        
+        .linkBtnLocation {
+            grid-row: 1;
+            grid-column: 3;
+        }
+
+        .linkImgLocation {
+            grid-row: 2;
+            grid-column: 3;
+        }
+
+        .contentGrid {
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: 5fr 90fr 5fr;
+            grid-template-rows: 1fr 50px 250px 4fr 40px auto .5fr;
+            grid-row: 1;
+        }  
+        
+        .outline {
+            background-color:  rgba(82, 120, 92, 1);
+            min-width: 3px;
+        }
+
+        .paper {
+            background-color: rgba(246, 237, 229, 1);
+        }
+        
+        .contentCol {
+            grid-column: 2;
+        }
+
+        .leftCol {
+            grid-column: 1;
+            grid-row: 1 / span 8
+        }
+        
+        .rightCol {
+            grid-column: 3;
+            grid-row: 1 / span 8
+        }
+
+        .displayContainer {
+            height: 78%;
+            width: 80vw;
+        }
+        
+        .displayBackground {
+            background-color: rgba(82, 120, 92, 1);
+            height: 100%;
+            border-top: 20px solid white;
+        }
+        
+        .btnRow {
+            font-style: italic;
+            color: rgba(246, 237, 229, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-top: 10px solid rgba(82, 120, 92, 1);
+        }
+        
+        .projectWindow {
+            border: 20px;
+            background-color: rgba(246, 237, 229, 1);
+            height: 85%;
+            align-self: center;
+        }
+        
+        .contentRow {
+            height: 100%;
+        }
+        
+        .toggleRow {
+            height: 8vh;
+            background-color: rgba(82, 120, 92, 1);
+            padding-bottom: 20px;
+        }
+        
+        .moveBtn {
+            border-left: 5px solid rgba(82, 120, 92, 1);
+            border-right: 5px solid rgba(82, 120, 92, 1);
+            height: 36px;
+            width: 40px;
+            padding-bottom: 4px;
+        }
+        
+        .iPhone {
+            color: black;
+            background-color: blue;
+        }
+        
+        .laptop {
+            align-self: center;
+        }
+
+        
+        .about {
+            text-align: left;
+            font-size: 100%;
+        }
+        
+        .projectName {
+            color: rgba(181, 131, 65, 1);
+            font-size: 2em;
+            font-weight: bold;
+            font-family: Source Sans Pro;
+            text-align: center;
+        }
+        
+        .projectStatus {
+            text-align: center;
+        }
+
+        .projectStatusComplete {
+            color: green;
+        }
+        
+        .projectStatusInProgress {
+            color: goldenrod;
+        }
+
+        .btnGrid {
+            display: grid;
+            grid-template-rows: 50fr 50fr;
+            grid-template-columns: 33fr 33fr 33fr;
+            height: fit-content; 
+            padding-top: 1%;
+            max-width: 90%;
+            grid-row: 2;
+        }
+
+        .outerBox {
+            display: grid;
+            grid-template-rows: 4.7fr 1fr;
+            grid-row-gap: 5px;
+        }
+
+        .col {
+            padding: 0 !important;
+        }
+        
+        @media screen and (max-width: 700px) and (min-width: 450px) {
+            /* img.laptop {
+                height: 160px;
+                width: 240px;
+                } */
+            
+            .about {
+                font-size: 90%;
+            }
+
+            .btnGrid {
+                max-width: 85%;
+            }
+
+            .displayBackground {
+                background-color:rgba(246, 237, 229, 1);
+                border: solid 2px rgba(82, 120, 92, 1);
+                margin: 2px;
+            }
+        }
+        
+        @media screen and (max-width: 450px) {
+            /* img {
+                width: 74%;
+                height: 50%;
+            } */
+
+            .about {
+                text-align: justify;
+                font-size: 75%;
+            }
+
+            /* img.laptop {
+            height: 110px;
+            width: 165px;
+            } */
+
+            .btnGrid {
+                grid-template-rows: repeat(6, 16.5fr);
+                grid-template-columns: 100fr;
+                height: fit-content; 
+                margin-left: 1.5% !important;
+            }
+
+            .gridContainer {
+                height: 80vh;
+            }
+
+            .codeBtnLocation {
+                grid-row: 1;
+                grid-column: 1;
+            }
+    
+            .codeImgLocation {
+                grid-row: 2;
+                grid-column: 1;
+            }
+    
+            .previewBtnLocation {
+                grid-row: 3;
+                grid-column: 1;
+            }
+    
+            .previewImgLocation {
+                grid-row: 4;
+                grid-column: 1;
+            }
+            
+            .linkBtnLocation {
+                grid-row: 5;
+                grid-column: 1;
+            }
+    
+            .linkImgLocation {
+                grid-row: 6;
+                grid-column: 1;
+            }
+
+            .displayBackground {
+                background-color:rgba(246, 237, 229, 1);
+                border: solid 2px rgba(82, 120, 92, 1);
+                margin: 2px;
+            }
+        }
+
+        .loader {
+            border: 16px solid  rgba(225, 238, 189, 0.83); /* Light grey */
+            border-top: 16px solid #51785C; /* Blue */
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            margin: 10px 0 0 10px;
+            animation: spin 2s linear infinite;
+            justify-self: center;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }

@@ -5,12 +5,17 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="projects.css" type="text/css">
+
+    <!-- link to js file used for scrolling projects  -->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Sam's Software Projects</title>
-    <link href="stylesheet_index.css" rel="stylesheet" type="text/css">
 
 </head>
 <!-- Optional JavaScript -->
@@ -19,7 +24,33 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-functions.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCIGp60bXHkC7ssMBFX5sAtBnD6vbIpfWU",
+    authDomain: "personalsite-35a38.firebaseapp.com",
+    databaseURL: "https://personalsite-35a38.firebaseio.com",
+    projectId: "personalsite-35a38",
+    storageBucket: "personalsite-35a38.appspot.com",
+    messagingSenderId: "933460557734",
+    appId: "1:933460557734:web:714421b5ce76c1ad9bd967",
+    measurementId: "G-3BHK9Q0JWL"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="./projects.js" defer></script>
 <body>
     <!-- NAVBAR -->
     <div class="pos-f-t">
@@ -45,15 +76,19 @@
         <nav class="navbar" style="background-color: #51785C; color:rgba(170, 85, 6, 0.65);">
             <button class="navbar-toggler" style="background-color: rgba(225, 238, 189, 0.83);" type="button" data-toggle="collapse" " data-target="#navbarToggleExternalContent " aria-controls="navbarToggleExternalContent " aria-expanded="false "
             aria-label="Toggle navigation " >
-        <div class="navbar-toggler-icon " style="background-image: url(customToggler.png); height: 40px; width: 60px; justify-self: flex-end; "></div>
+        <div class="navbar-toggler-icon " style="background-image: url(images/customToggler.png); height: 40px; width: 60px; justify-self: flex-end; "></div>
       </button>
     </nav> 
 
 </div>
 <!-- END NAVBAR -->
 
-    <h1 id="fillerText ">
-        Projects go here
-    </h1>
+<div class="outerBox" id="root">
 
+</div>
+
+</div>
+    </div>
 </body>
+
+</html>
